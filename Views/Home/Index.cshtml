@@ -3,3 +3,22 @@
 }
 <h1>Default Blank Page~</h1>
 <p>Get to adding stuff</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Quote</th>
+        <th>Date</th>
+    </tr>
+    <tr>
+            @foreach(var aQuote in ViewBag.allQuotes)
+            {
+                <td>@aQuote["UserName"]</td>
+                <td>@aQuote["Quote"]</td>
+                <td>@aQuote["DateAdded"]</td>
+            }
+            
+    </tr>   
+</table>
+
+
