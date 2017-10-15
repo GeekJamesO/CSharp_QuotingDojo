@@ -2,23 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 <h1>Default Blank Page~</h1>
-<p>Get to adding stuff</p>
+<form action="/addQuote" method="POST">
+    <label for="UserName"></label>
+    <input type="text" name="UserName" value="" placeholder="enter your name">
+    <br>
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Quote</th>
-        <th>Date</th>
-    </tr>
-    <tr>
-            @foreach(var aQuote in ViewBag.allQuotes)
-            {
-                <td>@aQuote["UserName"]</td>
-                <td>@aQuote["Quote"]</td>
-                <td>@aQuote["DateAdded"]</td>
-            }
-            
-    </tr>   
-</table>
-
+    <label for="Quote"></label>
+    <textarea name="Quote" id="" cols="60" rows="10"></textarea>
+    <br>
+    <button name="submit">Add my quote!</button>
+    <a href="/quotes">Skip to the quotes!</a>
+</form>
 

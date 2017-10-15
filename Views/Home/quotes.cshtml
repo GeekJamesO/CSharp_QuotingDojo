@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "QuotingDojo";
+}
+<h1>Here are the awesome quotes!~</h1>
+
+@foreach(var aQuote in ViewBag.allQuotes)
+{
+	<p>@aQuote["Quote"]</p>
+	<p>@aQuote["UserName"] at @aQuote["DateAdded"]</p>
+	<hr>
+}
+
+\
+

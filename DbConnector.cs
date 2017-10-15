@@ -18,7 +18,7 @@ namespace QuotingDojo.Connections
 		{
 			get
 			{
-				return new MySqlConnection($"Server={server};Port={port};Database={db};UserID={user};Password={pass};SslMode=None");
+				return new MySqlConnection($"Server={server};Port={port};Database={db};UserID={user};Password={pass};SslMode=None;Convert Zero Datetime=True");
 			}
 		}
 
